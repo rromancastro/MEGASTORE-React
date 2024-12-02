@@ -98,3 +98,60 @@
       );
     }
 }
+
+@media (max-width: 768px) {
+    #header {
+      padding-left: 40px;
+      h1 {
+        font-size: 20px;
+      }
+      #h2Waves {
+        height: 90px;
+        h2 {
+          font-size: 120px;
+        }
+        .season {
+          font-size: 200px;
+          letter-spacing: 0px;
+        }
+      }
+      h3 {
+        font-size: 30px;
+      }
+    }
+
+    #mainHomeSection {
+      h2 {
+        font-size: 50px;
+      }
+    }
+}
+
+@media (max-width: 425px){
+    #header {
+      height: 25vh;
+      padding-left: 20px;
+
+      #h2Waves {
+        height: 50px;
+        h2 {
+          font-size: 60px;
+        }
+        .season {
+          font-size: 80px;
+        }
+      }
+
+      
+      h3 {
+        margin-top: 24px;
+        font-size: 20px;
+      }
+    }
+    #mainHomeSection {
+      h2 {
+        font-size: 40px;
+        padding-top: 20px;
+      }
+    }
+}

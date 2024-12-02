@@ -44,7 +44,7 @@ nav {
 
 #inputSearch {
   outline: none;
-  width: 100%;
+  width: 20%;
   height: 100%;
   color: #1d1d1d;
   font-family: "Roboto", sans-serif;
@@ -56,6 +56,7 @@ nav {
   transition: 0.5s;
 }
 #inputSearch:focus {
+  width: 100%;
   border: 1px solid #ced0d3;
 }
 
@@ -71,11 +72,31 @@ nav {
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  #brandText {
+    font-size: 24px;
+  }
+}
+@media (max-width: 425px) {
+  nav {
+    height: 7vh;
+  }
+  #searchContainer {
+    grid-template-columns: 20% 80%;
+    height: 3.5vh;
+  }
+  #inputSearch {
+    width: 50px;
+  }
+  #brandText {
+    font-size: 20px;
+  }
+}
 #itemListContainer {
   min-height: 100vh;
   width: 100%;
   display: grid;
-  padding: 15px;
+  padding: 5vw;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   gap: 15px;
@@ -84,10 +105,20 @@ nav {
   background-color: #F5F5F5;
 }
 
+@media (max-width: 768px) {
+  #itemListContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 425px) {
+  #itemListContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 #itemCard {
   background-color: #FFFFFF;
   justify-self: center;
-  width: 23vw;
+  width: 100%;
   height: 100%;
   display: flex;
   gap: 15px;
@@ -129,7 +160,6 @@ nav {
 #infoProductCard h3 {
   color: #1d1d1d;
   font-weight: 400;
-  width: 15vw;
   font-size: 16px;
 }
 #infoProductCard h4 {
@@ -162,6 +192,11 @@ nav {
   width: 24px;
 }
 
+@media (max-width: 768px) {
+  #infoProductCard p {
+    font-size: 13px;
+  }
+}
 #header {
   background-image: url("../../assets/images/woman.jpg");
   background-size: cover;
@@ -232,12 +267,60 @@ nav {
     clip-path: polygon(0% 50%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
   }
 }
+@media (max-width: 768px) {
+  #header {
+    padding-left: 40px;
+  }
+  #header h1 {
+    font-size: 20px;
+  }
+  #header #h2Waves {
+    height: 90px;
+  }
+  #header #h2Waves h2 {
+    font-size: 120px;
+  }
+  #header #h2Waves .season {
+    font-size: 200px;
+    letter-spacing: 0px;
+  }
+  #header h3 {
+    font-size: 30px;
+  }
+  #mainHomeSection h2 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 425px) {
+  #header {
+    height: 25vh;
+    padding-left: 20px;
+  }
+  #header #h2Waves {
+    height: 50px;
+  }
+  #header #h2Waves h2 {
+    font-size: 60px;
+  }
+  #header #h2Waves .season {
+    font-size: 80px;
+  }
+  #header h3 {
+    margin-top: 24px;
+    font-size: 20px;
+  }
+  #mainHomeSection h2 {
+    font-size: 40px;
+    padding-top: 20px;
+  }
+}
 #itemDetail {
   display: grid;
+  padding: 0px 40px;
   grid-template-columns: 10% 45% 45%;
   grid-template-rows: auto;
   background-color: #eeeeee;
-  min-height: 90vh;
+  min-height: 100vh;
   align-items: center;
 }
 #itemDetail #imagesSelector {
@@ -253,17 +336,13 @@ nav {
   flex-direction: column;
   gap: 20px;
   padding: 70px;
+  padding-right: 40px;
 }
 #itemDetail #itemDetailImage {
   position: relative;
   width: 100%;
   min-height: 90vh;
   overflow: hidden;
-  display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-rows: auto;
-  justify-content: center;
-  align-items: center;
   cursor: none;
 }
 #itemDetail #itemDetailImage img {
@@ -298,7 +377,7 @@ nav {
 }
 #itemDetail button {
   background-color: #F36900;
-  width: 50%;
+  width: 100%;
   padding: 15px 0px;
   font-family: "Roboto", sans-serif;
 }
@@ -322,6 +401,77 @@ nav {
   opacity: 0;
 }
 
+@media (max-width: 768px) {
+  #itemDetail {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #itemDetail #imagesSelector {
+    position: absolute;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    margin-top: 40px;
+    width: 44vw;
+    height: 120px;
+    order: 2;
+  }
+  #itemDetail #imagesSelector img {
+    height: 100%;
+  }
+  #itemDetail #itemDetailImage {
+    min-height: 60vh;
+  }
+  #itemDetail #itemDetailImage img {
+    padding: 0;
+  }
+  #itemDetail h2 {
+    font-size: 35px;
+  }
+  #itemDetail h3 {
+    font-size: 15px;
+  }
+  #itemDetail h4 {
+    font-size: 20px;
+  }
+  #itemDetail li {
+    font-size: 14px;
+  }
+  #itemDetail #itemDetailText {
+    gap: 10px;
+    padding: 20px;
+  }
+  #itemDetail button {
+    width: 100%;
+    height: 40px;
+    padding: 0;
+  }
+}
+@media (max-width: 425px) {
+  #itemDetail {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  #itemDetail #imagesSelector {
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    align-self: center;
+    justify-self: flex-end;
+  }
+  #itemDetail #imagesSelector img {
+    width: 30%;
+    object-fit: contain;
+  }
+  #itemDetail #itemDetailImage {
+    min-height: 400px;
+    margin-top: 100px;
+  }
+  #itemDetail #itemDetailImage img {
+    padding: 0;
+  }
+}
 * {
   padding: 0;
   margin: 0;

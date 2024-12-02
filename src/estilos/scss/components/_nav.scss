@@ -43,7 +43,7 @@ nav {
 
 #inputSearch {
     outline: none;
-    width: 100%;
+    width: 20%;
     height: 100%;
     color: vars.$fontGrey;
     font-family: vars.$fontRoboto;
@@ -54,8 +54,8 @@ nav {
     padding-left: 10px;
     transition: .5s;
     &:focus {
+    width: 100%;
     border: 1px solid #ced0d3;
-
     }
 }
 
@@ -69,4 +69,30 @@ nav {
     border-radius: 10px 0px 0px 10px;
     justify-content: center;
     cursor: pointer;
+}
+
+@media (max-width: 768px){
+    #brandText {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 425px){
+    nav {
+        height: 7vh;
+    }
+
+    #searchContainer {
+        grid-template-columns: 20% 80%;
+        height: 3.5vh;
+    }
+
+    #inputSearch {
+        width: 50px;
+    }
+
+
+    #brandText {
+        font-size: 20px;
+    }
 }
