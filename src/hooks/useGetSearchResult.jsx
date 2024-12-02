@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-import { getProductsByCategory } from "../services/productServices";
+import { getSearchResult } from "../services/productServices";
 
-export const useGetProductsByCategory = (category) => {
+export const useGetSearchResult = (value) => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        getProductsByCategory(category)
+        getSearchResult(value)
         .then((res) => {
             setProducts(res.data.products)
         })
-    }, [category])
+    }, [value])
     return {products}
 }

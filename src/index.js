@@ -5,3 +5,7 @@ export * from './components/ItemListContainer/ItemListContainer'
 export * from './components/Star/Star'
 
 export * from './pages/Home'
+export * from './pages/ItemDetail'
+export * from './pages/NotFound'
+export * from './pages/ProductsByCategory'
+export * from './pages/SearchResult'

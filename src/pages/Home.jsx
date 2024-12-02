@@ -1,4 +1,3 @@
-import { useGetAllProducts } from "../hooks/useGetAllProducts"
 import { useGetProductsByCategory } from "../hooks/useGetProductsByCategory"
 
 import { Layout, ItemListContainer } from "../index"
@@ -6,7 +5,6 @@ import { Layout, ItemListContainer } from "../index"
 export const Home = () => {
     
     const {products} = useGetProductsByCategory('sunglasses');
-    console.log(products)
 
     return (
         <Layout>
